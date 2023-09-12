@@ -22,4 +22,5 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u55c_gen3x16_xdma_3_2
 ```bash
 This project contains one 512-unit GRU layer.
 The weights are sent from host.
+Due to routing congestion problem, the running frequency reduced form 200M to 100M HZ.
 ```
