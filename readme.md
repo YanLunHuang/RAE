@@ -23,5 +23,5 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u55c_gen3x16_xdma_3_2
 This project contains one 512-unit GRU layer.
 The fully-connected layer is divided into two parts, and it reuses the hardware.
 In this way, we can reduce the circuit complexity and improve the routing congestion problem.
-Running frequency: 200M
+Running frequency: 200M HZ
 ```
