@@ -1,0 +1,210 @@
+
+
+================================================================
+== Vitis HLS Report for 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s'
+================================================================
+* Date:           Thu Sep  7 01:05:42 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        alveo_hls4ml
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  9.00 ns|  6.244 ns|     2.43 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |  Latency (cycles) |   Latency (absolute)  |    Interval    | Pipeline|
+    |   min   |   max   |    min    |    max    |  min |   max   |   Type  |
+    +---------+---------+-----------+-----------+------+---------+---------+
+    |     6174|  1579034|  55.566 us|  14.211 ms|  6174|  1579034|       no|
+    +---------+---------+-----------+-----------+------+---------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+------+--------+---------+
+        |                                                                             |                                                                 |  Latency (cycles) |  Latency (absolute) |    Interval   | Pipeline|
+        |                                   Instance                                  |                              Module                             |   min   |   max   |    min   |    max   |  min |   max  |   Type  |
+        +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+------+--------+---------+
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_453_2_fu_2116  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_453_2  |      514|      514|  4.626 us|  4.626 us|   514|     514|       no|
+        |grp_dense_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_1_s_fu_2634         |dense_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_1_s         |     1024|   787454|  9.216 us|  7.087 ms|  1024|  787454|       no|
+        |grp_dense_ap_fixed_8_1_4_0_0_ap_fixed_8_1_5_3_0_config12_2_s_fu_2644         |dense_ap_fixed_8_1_4_0_0_ap_fixed_8_1_5_3_0_config12_2_s         |     1024|   787454|  9.216 us|  7.087 ms|  1024|  787454|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_464_3_fu_3163  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_464_3  |     1026|     1026|  9.234 us|  9.234 us|  1026|    1026|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_468_1_fu_3170  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_468_1  |     1026|     1026|  9.234 us|  9.234 us|  1026|    1026|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_477_4_fu_3176  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_477_4  |      514|      514|  4.626 us|  4.626 us|   514|     514|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_483_5_fu_3183  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_483_5  |      514|      514|  4.626 us|  4.626 us|   514|     514|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_482_1_fu_3190  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_482_1  |      514|      514|  4.626 us|  4.626 us|   514|     514|       no|
+        |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_494_6_fu_3196  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_494_6  |      517|      517|  4.653 us|  4.653 us|   517|     517|       no|
+        +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|        2|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     1|    69978|   215124|    -|
+|Memory               |        8|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      413|    -|
+|Register             |        -|     -|       25|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        8|     1|    70003|   215539|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |       ~0|    ~0|        8|       49|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|        2|       16|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-------+--------+-----+
+    |                                   Instance                                  |                              Module                             | BRAM_18K| DSP|   FF  |   LUT  | URAM|
+    +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-------+--------+-----+
+    |grp_dense_ap_fixed_8_1_4_0_0_ap_fixed_8_1_5_3_0_config12_2_s_fu_2644         |dense_ap_fixed_8_1_4_0_0_ap_fixed_8_1_5_3_0_config12_2_s         |        0|   0|  32805|  108416|    0|
+    |grp_dense_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_1_s_fu_2634         |dense_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_1_s         |        0|   0|  32805|  103295|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_453_2_fu_2116  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_453_2  |        0|   0|   4118|      66|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_464_3_fu_3163  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_464_3  |        0|   0|     25|      83|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_468_1_fu_3170  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_468_1  |        0|   0|     25|      93|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_477_4_fu_3176  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_477_4  |        0|   0|     23|     117|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_482_1_fu_3190  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_482_1  |        0|   0|     23|     126|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_483_5_fu_3183  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_483_5  |        0|   0|     23|      81|    0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_494_6_fu_3196  |gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_494_6  |        0|   1|    131|    2847|    0|
+    +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-------+--------+-----+
+    |Total                                                                        |                                                                 |        0|   1|  69978|  215124|    0|
+    +-----------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+-------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +--------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |       Memory       |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +--------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |h_state_V_U         |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_h_state_V_RAM_AUTbkb  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    |tmpres_U            |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_RAM_AUTO_1cud  |        1|  0|   0|    0|  1536|    8|     1|        12288|
+    |tmpres_state_zr_U   |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_RAM_AUTO_1cud  |        1|  0|   0|    0|  1536|    8|     1|        12288|
+    |tmpres_state_h_V_U  |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_state_h_V_eOg  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    |tmpres_h_V_U        |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_state_h_V_eOg  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    |inputacc_h_V_U      |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_state_h_V_eOg  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    |tmpres_zr_V_U       |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_zr_V_RAM_AfYi  |        1|  0|   0|    0|  1024|    8|     1|         8192|
+    |inputacc_zr_V_U     |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_tmpres_zr_V_RAM_AfYi  |        1|  0|   0|    0|  1024|    8|     1|         8192|
+    +--------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total               |                                                                                  |        8|  0|   0|    0|  7168|   64|     8|        57344|
+    +--------------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |          Variable Name          | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |ap_block_state2_on_subcall_done  |        or|   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+    |Total                            |          |   0|  0|   2|           1|           1|
+    +---------------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+-----+-----------+
+    |            Name           | LUT| Input Size| Bits| Total Bits|
+    +---------------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm                  |  81|         17|    1|         17|
+    |h_state_V_address0         |  14|          3|    9|         27|
+    |h_state_V_ce0              |  14|          3|    1|          3|
+    |h_state_V_we0              |   9|          2|    1|          2|
+    |inputacc_h_V_address0      |  14|          3|    9|         27|
+    |inputacc_h_V_ce0           |  14|          3|    1|          3|
+    |inputacc_h_V_we0           |   9|          2|    1|          2|
+    |inputacc_zr_V_address0     |  14|          3|   10|         30|
+    |inputacc_zr_V_ce0          |  14|          3|    1|          3|
+    |inputacc_zr_V_we0          |   9|          2|    1|          2|
+    |tmpres_address0            |  20|          4|   11|         44|
+    |tmpres_ce0                 |  20|          4|    1|          4|
+    |tmpres_h_V_address0        |  14|          3|    9|         27|
+    |tmpres_h_V_ce0             |  14|          3|    1|          3|
+    |tmpres_h_V_we0             |   9|          2|    1|          2|
+    |tmpres_state_h_V_address0  |  14|          3|    9|         27|
+    |tmpres_state_h_V_ce0       |  14|          3|    1|          3|
+    |tmpres_state_h_V_we0       |   9|          2|    1|          2|
+    |tmpres_state_zr_address0   |  20|          4|   11|         44|
+    |tmpres_state_zr_ce0        |  20|          4|    1|          4|
+    |tmpres_state_zr_we0        |   9|          2|    1|          2|
+    |tmpres_we0                 |   9|          2|    1|          2|
+    |tmpres_zr_V_address0       |  20|          4|   10|         40|
+    |tmpres_zr_V_ce0            |  20|          4|    1|          4|
+    |tmpres_zr_V_we0            |   9|          2|    1|          2|
+    +---------------------------+----+-----------+-----+-----------+
+    |Total                      | 413|         87|   95|        326|
+    +---------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                           Name                                           | FF | LUT| Bits| Const Bits|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                                 |  16|   0|   16|          0|
+    |grp_dense_ap_fixed_8_1_4_0_0_ap_fixed_8_1_5_3_0_config12_2_s_fu_2644_ap_start_reg         |   1|   0|    1|          0|
+    |grp_dense_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_1_s_fu_2634_ap_start_reg         |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_453_2_fu_2116_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_464_3_fu_3163_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_468_1_fu_3170_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_477_4_fu_3176_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_482_1_fu_3190_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_483_5_fu_3183_ap_start_reg  |   1|   0|    1|          0|
+    |grp_gru_static_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_494_6_fu_3196_ap_start_reg  |   1|   0|    1|          0|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                     |  25|   0|   25|          0|
+    +------------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++---------------------+-----+-------+------------+------------------------------------------------------------------------+--------------+
+|      RTL Ports      | Dir |  Bits |  Protocol  |                              Source Object                             |    C Type    |
++---------------------+-----+-------+------------+------------------------------------------------------------------------+--------------+
+|ap_clk               |   in|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|ap_rst               |   in|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|ap_start             |   in|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|ap_done              |  out|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|ap_idle              |  out|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|ap_ready             |  out|      1|  ap_ctrl_hs|  gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config12>|  return value|
+|p_read               |   in|   4096|     ap_none|                                                                  p_read|        scalar|
+|h_newstate_address0  |  out|      9|   ap_memory|                                                              h_newstate|         array|
+|h_newstate_ce0       |  out|      1|   ap_memory|                                                              h_newstate|         array|
+|h_newstate_we0       |  out|      1|   ap_memory|                                                              h_newstate|         array|
+|h_newstate_d0        |  out|      8|   ap_memory|                                                              h_newstate|         array|
+|param_address0       |  out|      9|   ap_memory|                                                                   param|         array|
+|param_ce0            |  out|      1|   ap_memory|                                                                   param|         array|
+|param_q0             |   in|  12288|   ap_memory|                                                                   param|         array|
+|param_zr_address0    |  out|      9|   ap_memory|                                                                param_zr|         array|
+|param_zr_ce0         |  out|      1|   ap_memory|                                                                param_zr|         array|
+|param_zr_q0          |   in|  12288|   ap_memory|                                                                param_zr|         array|
++---------------------+-----+-------+------------+------------------------------------------------------------------------+--------------+
+
