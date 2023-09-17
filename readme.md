@@ -21,7 +21,7 @@ XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u55c_gen3x16_xdma_3_2
 ## Some detail
 ```bash
 This project contains one 512-unit bidirectional layer.
-All unroll pragma still remains.
+All unroll pragma still remain.
 The fully-connected layer is divided into two parts, and it reuses the hardware.
 In this way, we can reduce the circuit complexity and improve the routing congestion problem.
 Running frequency: 100M HZ
