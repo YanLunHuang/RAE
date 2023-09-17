@@ -1,0 +1,6486 @@
+<profile>
+
+<ReportVersion>
+<Version>2022.2</Version>
+</ReportVersion>
+
+<UserAssignments>
+<unit>ns</unit>
+<ProductFamily>virtexuplus</ProductFamily>
+<Part>xcu55c-fsvh2892-2L-e</Part>
+<TopModelName>gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s</TopModelName>
+<TargetClockPeriod>9.00</TargetClockPeriod>
+<ClockUncertainty>2.43</ClockUncertainty>
+<FlowTarget>vitis</FlowTarget>
+</UserAssignments>
+
+<PerformanceEstimates>
+<PipelineType>no</PipelineType>
+<SummaryOfTimingAnalysis>
+<unit>ns</unit>
+<EstimatedClockPeriod>5.880</EstimatedClockPeriod>
+</SummaryOfTimingAnalysis>
+<SummaryOfOverallLatency>
+<unit>clock cycles</unit>
+<Best-caseLatency>2198</Best-caseLatency>
+<Average-caseLatency>2198</Average-caseLatency>
+<Worst-caseLatency>2202</Worst-caseLatency>
+<Best-caseRealTimeLatency>19.782 us</Best-caseRealTimeLatency>
+<Average-caseRealTimeLatency>19.782 us</Average-caseRealTimeLatency>
+<Worst-caseRealTimeLatency>19.818 us</Worst-caseRealTimeLatency>
+<Interval-min>2198</Interval-min>
+<Interval-max>2202</Interval-max>
+</SummaryOfOverallLatency>
+<SummaryOfLoopLatency>
+<VITIS_LOOP_425_1>
+<Slack>6.57</Slack>
+<TripCount>2</TripCount>
+<Latency>
+<range>
+<min>140</min>
+<max>142</max>
+</range>
+</Latency>
+<AbsoluteTimeLatency>
+<range>
+<min>1260</min>
+<max>1278</max>
+</range>
+</AbsoluteTimeLatency>
+<IterationLatency>
+<range>
+<min>70</min>
+<max>71</max>
+</range>
+</IterationLatency>
+<InstanceList>
+</InstanceList>
+</VITIS_LOOP_425_1>
+<VITIS_LOOP_425_1>
+<Slack>6.57</Slack>
+<TripCount>2</TripCount>
+<Latency>
+<range>
+<min>1028</min>
+<max>1030</max>
+</range>
+</Latency>
+<AbsoluteTimeLatency>
+<range>
+<min>9252</min>
+<max>9270</max>
+</range>
+</AbsoluteTimeLatency>
+<IterationLatency>
+<range>
+<min>514</min>
+<max>515</max>
+</range>
+</IterationLatency>
+<InstanceList>
+</InstanceList>
+</VITIS_LOOP_425_1>
+</SummaryOfLoopLatency>
+</PerformanceEstimates>
+
+<AreaEstimates>
+<Resources>
+<BRAM_18K>9</BRAM_18K>
+<DSP>513</DSP>
+<FF>285021</FF>
+<LUT>439926</LUT>
+<URAM>0</URAM>
+</Resources>
+<AvailableResources>
+<BRAM_18K>4032</BRAM_18K>
+<DSP>9024</DSP>
+<FF>2607360</FF>
+<LUT>1303680</LUT>
+<URAM>960</URAM>
+</AvailableResources>
+</AreaEstimates>
+
+<InterfaceSummary>
+<RtlPorts>
+<name>ap_clk</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_rst</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_start</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_done</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_idle</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_ready</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_0</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_1</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_2</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_3</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_4</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_5</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_6</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_7</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_8</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_9</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_10</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_11</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_12</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_13</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_14</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_15</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_16</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_17</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_18</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_19</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_20</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_21</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_22</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_23</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_24</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_25</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_26</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_27</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_28</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_29</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_30</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_31</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_32</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_33</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_34</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_35</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_36</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_37</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_38</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_39</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_40</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_41</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_42</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_43</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_44</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_45</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_46</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_47</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_48</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_49</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_50</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_51</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_52</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_53</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_54</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_55</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_56</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_57</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_58</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_59</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_60</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_61</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_62</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_63</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_64</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_65</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_66</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_67</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_68</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_69</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_70</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_71</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_72</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_73</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_74</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_75</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_76</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_77</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_78</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_79</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_80</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_81</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_82</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_83</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_84</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_85</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_86</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_87</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_88</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_89</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_90</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_91</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_92</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_93</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_94</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_95</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_96</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_97</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_98</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_99</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_100</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_101</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_102</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_103</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_104</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_105</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_106</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_107</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_108</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_109</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_110</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_111</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_112</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_113</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_114</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_115</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_116</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_117</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_118</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_119</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_120</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_121</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_122</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_123</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_124</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_125</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_126</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_127</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_128</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_129</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_130</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_131</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_132</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_133</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_134</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_135</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_136</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_137</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_138</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_139</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_140</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_141</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_142</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_143</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_144</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_145</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_146</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_147</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_148</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_149</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_150</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_151</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_152</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_153</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_154</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_155</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_156</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_157</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_158</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_159</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_160</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_161</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_162</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_163</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_164</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_165</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_166</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_167</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_168</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_169</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_170</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_171</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_172</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_173</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_174</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_175</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_176</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_177</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_178</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_179</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_180</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_181</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_182</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_183</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_184</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_185</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_186</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_187</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_188</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_189</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_190</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_191</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_192</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_193</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_194</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_195</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_196</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_197</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_198</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_199</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_200</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_201</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_202</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_203</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_204</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_205</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_206</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_207</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_208</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_209</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_210</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_211</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_212</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_213</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_214</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_215</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_216</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_217</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_218</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_219</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_220</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_221</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_222</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_223</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_224</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_225</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_226</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_227</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_228</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_229</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_230</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_231</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_232</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_233</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_234</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_235</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_236</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_237</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_238</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_239</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_240</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_241</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_242</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_243</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_244</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_245</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_246</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_247</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_248</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_249</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_250</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_251</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_252</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_253</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_254</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_255</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_256</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_257</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_258</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_259</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_260</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_261</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_262</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_263</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_264</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_265</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_266</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_267</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_268</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_269</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_270</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_271</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_272</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_273</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_274</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_275</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_276</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_277</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_278</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_279</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_280</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_281</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_282</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_283</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_284</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_285</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_286</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_287</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_288</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_289</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_290</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_291</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_292</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_293</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_294</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_295</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_296</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_297</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_298</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_299</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_300</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_301</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_302</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_303</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_304</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_305</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_306</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_307</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_308</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_309</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_310</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_311</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_312</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_313</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_314</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_315</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_316</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_317</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_318</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_319</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_320</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_321</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_322</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_323</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_324</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_325</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_326</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_327</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_328</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_329</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_330</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_331</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_332</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_333</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_334</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_335</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_336</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_337</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_338</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_339</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_340</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_341</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_342</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_343</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_344</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_345</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_346</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_347</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_348</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_349</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_350</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_351</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_352</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_353</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_354</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_355</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_356</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_357</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_358</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_359</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_360</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_361</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_362</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_363</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_364</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_365</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_366</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_367</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_368</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_369</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_370</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_371</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_372</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_373</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_374</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_375</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_376</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_377</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_378</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_379</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_380</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_381</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_382</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_383</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_384</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_385</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_386</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_387</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_388</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_389</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_390</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_391</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_392</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_393</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_394</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_395</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_396</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_397</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_398</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_399</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_400</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_401</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_402</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_403</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_404</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_405</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_406</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_407</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_408</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_409</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_410</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_411</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_412</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_413</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_414</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_415</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_416</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_417</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_418</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_419</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_420</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_421</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_422</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_423</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_424</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_425</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_426</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_427</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_428</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_429</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_430</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_431</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_432</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_433</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_434</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_435</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_436</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_437</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_438</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_439</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_440</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_441</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_442</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_443</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_444</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_445</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_446</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_447</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_448</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_449</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_450</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_451</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_452</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_453</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_454</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_455</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_456</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_457</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_458</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_459</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_460</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_461</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_462</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_463</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_464</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_465</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_466</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_467</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_468</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_469</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_470</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_471</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_472</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_473</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_474</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_475</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_476</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_477</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_478</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_479</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_480</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_481</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_482</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_483</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_484</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_485</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_486</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_487</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_488</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_489</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_490</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_491</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_492</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_493</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_494</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_495</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_496</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_497</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_498</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_499</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_500</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_501</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_502</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_503</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_504</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_505</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_506</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_507</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_508</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_509</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_510</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>ap_return_511</name>
+<Object>gru_static&lt;ap_fixed&lt;8, 1, 5, 3, 0&gt;, ap_fixed&lt;8, 1, 5, 3, 0&gt;, config2_b&gt;</Object>
+<Type>return value</Type>
+<Scope></Scope>
+<IOProtocol>ap_ctrl_hs</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>reset_state</name>
+<Object>reset_state</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>1</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read</name>
+<Object>p_read</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read1</name>
+<Object>p_read1</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read2</name>
+<Object>p_read2</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read3</name>
+<Object>p_read3</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read4</name>
+<Object>p_read4</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read5</name>
+<Object>p_read5</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read6</name>
+<Object>p_read6</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read7</name>
+<Object>p_read7</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read8</name>
+<Object>p_read8</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read9</name>
+<Object>p_read9</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read10</name>
+<Object>p_read10</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read11</name>
+<Object>p_read11</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read12</name>
+<Object>p_read12</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read13</name>
+<Object>p_read13</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read14</name>
+<Object>p_read14</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read15</name>
+<Object>p_read15</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read16</name>
+<Object>p_read16</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read17</name>
+<Object>p_read17</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read18</name>
+<Object>p_read18</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read19</name>
+<Object>p_read19</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read20</name>
+<Object>p_read20</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read21</name>
+<Object>p_read21</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read22</name>
+<Object>p_read22</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read23</name>
+<Object>p_read23</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read24</name>
+<Object>p_read24</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read25</name>
+<Object>p_read25</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read26</name>
+<Object>p_read26</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read27</name>
+<Object>p_read27</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read28</name>
+<Object>p_read28</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read29</name>
+<Object>p_read29</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read30</name>
+<Object>p_read30</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read31</name>
+<Object>p_read31</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read32</name>
+<Object>p_read32</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read33</name>
+<Object>p_read33</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read34</name>
+<Object>p_read34</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read35</name>
+<Object>p_read35</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read36</name>
+<Object>p_read36</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read37</name>
+<Object>p_read37</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read38</name>
+<Object>p_read38</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read39</name>
+<Object>p_read39</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read40</name>
+<Object>p_read40</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read41</name>
+<Object>p_read41</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read42</name>
+<Object>p_read42</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read43</name>
+<Object>p_read43</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read44</name>
+<Object>p_read44</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read45</name>
+<Object>p_read45</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read46</name>
+<Object>p_read46</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read47</name>
+<Object>p_read47</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>p_read48</name>
+<Object>p_read48</Object>
+<Type>scalar</Type>
+<Scope></Scope>
+<IOProtocol>ap_none</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>8</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v1_address0</name>
+<Object>bw2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>6</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v1_ce0</name>
+<Object>bw2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v1_q0</name>
+<Object>bw2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6144</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v2_address0</name>
+<Object>bw2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>6</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v2_ce0</name>
+<Object>bw2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bw2_v2_q0</name>
+<Object>bw2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6144</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v1_address0</name>
+<Object>bwr2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>9</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v1_ce0</name>
+<Object>bwr2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v1_q0</name>
+<Object>bwr2_v1</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6144</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v2_address0</name>
+<Object>bwr2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>9</Bits>
+<Attribute>address</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v2_ce0</name>
+<Object>bwr2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>out</Dir>
+<Bits>1</Bits>
+<Attribute>control</Attribute>
+</RtlPorts>
+<RtlPorts>
+<name>bwr2_v2_q0</name>
+<Object>bwr2_v2</Object>
+<Type>array</Type>
+<Scope>global</Scope>
+<IOProtocol>ap_memory</IOProtocol>
+<IOConfig></IOConfig>
+<Dir>in</Dir>
+<Bits>6144</Bits>
+<Attribute>data</Attribute>
+</RtlPorts>
+</InterfaceSummary>
+
+</profile>
