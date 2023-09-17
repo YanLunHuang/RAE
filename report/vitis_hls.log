@@ -1,0 +1,1467 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2022.2 (64-bit)
+  **** SW Build 3670227 on Oct 13 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2022.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2022.2/bin/unwrapped/lnx64.o/vitis_hls'
+/tools/Xilinx/Vitis_HLS/2022.2/tps/tcl/tcl8.5/tzdata/UTC can't be opened.
+INFO: [HLS 200-10] For user 'user' on host 'eglyanlun' (Linux_x86_64 version 5.3.0.release.104.782985b880c9) on Sat Sep 16 16:55:43 UTC 2023
+INFO: [HLS 200-10] On os Ubuntu 20.04.4 LTS
+INFO: [HLS 200-10] In directory '/home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml'
+Sourcing Tcl script 'alveo_hls4ml.tcl'
+INFO: [HLS 200-1510] Running: open_project alveo_hls4ml 
+INFO: [HLS 200-10] Creating and opening project '/home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml'.
+INFO: [HLS 200-1510] Running: set_top alveo_hls4ml 
+INFO: [HLS 200-1510] Running: add_files /home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp -cflags  -D MYPROJ=myproject -D IS_DENSE -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/weights -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils -std=c++11 
+INFO: [HLS 200-10] Adding design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp -cflags  -D MYPROJ=myproject -D IS_DENSE -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/weights -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils -std=c++11 
+INFO: [HLS 200-10] Adding design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp' to the project
+INFO: [HLS 200-1510] Running: add_files /home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp -cflags  -D MYPROJ=myproject -D IS_DENSE -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/weights -I /home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils -std=c++11 
+INFO: [HLS 200-10] Adding design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp' to the project
+INFO: [HLS 200-1510] Running: open_solution -flow_target vitis solution 
+INFO: [HLS 200-10] Creating and opening solution '/home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution'.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu55c-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu55c-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 300.000000MHz -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.333ns.
+INFO: [HLS 200-1510] Running: config_dataflow -strict_mode warning 
+INFO: [HLS 200-1510] Running: config_export -deadlock_detection sim 
+WARNING: [HLS 200-483] The 'config_export -deadlock_detection' command is deprecated and will be removed in a future release. Use 'config_rtl -deadlock_detection' as its replacement.
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: config_interface -m_axi_conservative_mode=1 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_addr64 
+INFO: [HLS 200-1510] Running: config_interface -m_axi_auto_max_ports=0 
+INFO: [HLS 200-1510] Running: config_export -format xo -ipname alveo_hls4ml 
+INFO: [HLS 200-1907] Replacing 'config_export -deadlock_detection=sim' with 'config_rtl -deadlock_detection=sim' in current solution file
+INFO: [HLS 200-1510] Running: create_clock -period 4.0 -name default 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 4ns.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 754.258 MB.
+INFO: [HLS 200-10] Analyzing design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp' ... 
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:79:5)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:79:29)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:81:5)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:81:27)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-114] Since the only kind of statements allowed in a canonical dataflow region are variable declarations and function calls, the compiler may not be able to correctly handle the region (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:55:9)
+Resolution: For help on HLS 214-114 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-114.html
+WARNING: [HLS 200-471] Dataflow form checks found 5 issue(s) in file /home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html
+INFO: [HLS 200-10] Analyzing design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp' ... 
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_activation_stream.h:453:9)
+WARNING: [HLS 207-5528] 'region' in '#pragma HLS Inline' is deprecated, use 'Inline Pragma' instead (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_conv1d.h:38:26)
+WARNING: [HLS 207-5528] 'region' in '#pragma HLS Inline' is deprecated, use 'Inline Pragma' instead (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_conv1d.h:54:26)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_sepconv_stream.h:148:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_sepconv_stream.h:195:9)
+WARNING: [HLS 207-5506] the pragma is not supported and will be ignored (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_sepconv_stream.h:260:9)
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp:44:110)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp:44:115)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp:44:153)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 214-113] Either use an argument of the function or declare the variable inside the dataflow loop body (/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp:44:158)
+Resolution: For help on HLS 214-113 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=214-113.html
+WARNING: [HLS 200-471] Dataflow form checks found 4 issue(s) in file /home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp
+Resolution: For help on HLS 200-471 see www.xilinx.com/cgi-bin/docs/rdoc?v=2022.2;t=hls+guidance;d=200-471.html
+WARNING: [HLS 207-5292] unused parameter 'keep' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_helpers.h:372:99)
+WARNING: [HLS 207-5292] unused parameter 'data' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:11:36)
+WARNING: [HLS 207-5292] unused parameter 'buffer' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:12:36)
+WARNING: [HLS 207-5292] unused parameter 'partition' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:13:44)
+WARNING: [HLS 207-5292] unused parameter 'data' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:21:24)
+WARNING: [HLS 207-5292] unused parameter 'buffer' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:22:24)
+WARNING: [HLS 207-5292] unused parameter 'partition' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_code_gen.h:23:32)
+WARNING: [HLS 207-5292] unused parameter 'data' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recr_activations.h:19:35)
+WARNING: [HLS 207-5292] unused parameter 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recr_activations.h:19:63)
+WARNING: [HLS 207-5292] unused parameter 'reset_state' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:48:16)
+WARNING: [HLS 207-5292] unused parameter 'reset_state' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:351:15)
+INFO: [HLS 200-10] Analyzing design file '/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 22.05 seconds. CPU system time: 2.24 seconds. Elapsed time: 41.35 seconds; current allocated memory: 766.176 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:70:17)
+INFO: [HLS 214-131] Inlining function 'nnet::product::mult<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::product(ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>)' into 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(int, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:70:17)
+INFO: [HLS 214-291] Loop 'MultLoop' is marked as complete unroll implied by the pipeline pragma (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:64:9)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_543_3' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:543:20) in function 'nnet::gru_stack<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_b>' completely with a factor of 49 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:528:0)
+INFO: [HLS 214-186] Unrolling loop 'VITIS_LOOP_543_3' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:543:20) in function 'nnet::gru_stack<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_f>' completely with a factor of 49 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:528:0)
+INFO: [HLS 214-186] Unrolling loop 'MultLoop' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:64:9) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 768 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-186] Unrolling loop 'InitAccum' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:42:5) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>' completely with a factor of 768 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-186] Unrolling loop 'MultLoop' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:64:9) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 768 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-186] Unrolling loop 'InitAccum' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:42:5) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>' completely with a factor of 768 (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-367] Instantiating function 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(int, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*) (.54.60.66.144.150.156.249.268.279.295.307.320.546.553.566)' to 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(int, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*) (.54.60.66.144.150.156.249.268.279.295.307.320.546.553.566)' by setting 'weights_v1' to 'weights_v1', 'weights_v2' to 'weights_v2', 'biases' to 'biases' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:427:2)
+INFO: [HLS 214-367] Instantiating function 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*) (.162.168.174.181.188.195.382.395.412.422.440.447.516.523.536)' to 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*) (.162.168.174.181.188.195.382.395.412.422.440.447.516.523.536)' by setting 'weights_v1' to 'weights_v1', 'weights_v2' to 'weights_v2', 'biases' to 'biases' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:427:2)
+INFO: [HLS 214-178] Inlining function 'std::enable_if<!(std::is_same<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<1> >::value), ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(config2_1::accum_t)' into 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(int, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*) (.162.168.174.181.188.195.382.395.412.422.440.447.516.523.536)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-178] Inlining function 'std::enable_if<!(std::is_same<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_uint<1> >::value), ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> >::type nnet::cast<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(config2_2::accum_t)' into 'void nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(int, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*) (.54.60.66.144.150.156.249.268.279.295.307.320.546.553.566)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:17:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::hard_sigmoid<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_sigmoid_config2_recr>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*) (.90.96.102.126.132.138)' into 'nnet::activation::hard_sigmoid<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_sigmoid_config2_recr>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recr_activations.h:47:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::hard_tanh<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_tanh_config2>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*) (.72.78.84.108.114.120)' into 'nnet::activation::hard_tanh<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_tanh_config2>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recr_activations.h:67:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::dense_loop<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_f>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::bias_t*, config2_f::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::dense_loop<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_f>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::bias_t*, config2_f::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'nnet::activation::hard_sigmoid<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_sigmoid_config2_recr>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_f>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::bias_t*, config2_f::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'nnet::activation::hard_tanh<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_tanh_config2>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_f>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::weight_t*, config2_f::bias_t*, config2_f::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::dense_loop<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_1::weight_t*, config2_1::weight_t*, config2_1::bias_t*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_b>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::bias_t*, config2_b::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'void nnet::dense_loop<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>(ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_2::weight_t*, config2_2::weight_t*, config2_2::bias_t*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_b>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::bias_t*, config2_b::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'nnet::activation::hard_sigmoid<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_sigmoid_config2_recr>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_ufixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_b>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::bias_t*, config2_b::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'nnet::activation::hard_tanh<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, hard_tanh_config2>::activation(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>*)' into 'void nnet::gru_static<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_b>(bool, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::weight_t*, config2_b::bias_t*, config2_b::bias_t*)' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:440:0)
+INFO: [HLS 214-178] Inlining function 'void fillWeights<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 37632u>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'alveo_hls4ml' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:64:0)
+INFO: [HLS 214-178] Inlining function 'void fillWeights<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, 393216u>(ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0> const*, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>*)' into 'alveo_hls4ml' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:64:0)
+INFO: [HLS 214-248] Applying array_partition to 'fbr2': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/weights/fbr2.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'fb2': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/weights/fb2.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'bbr2': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/weights/bbr2.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'bb2': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/weights/bb2.h:12:0)
+INFO: [HLS 214-248] Applying array_partition to 'acc': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:38:29)
+INFO: [HLS 214-248] Applying array_partition to 'qh_state': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:452:32)
+INFO: [HLS 214-248] Applying array_partition to 'data_in': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:531:12)
+INFO: [HLS 214-248] Applying array_partition to 'temp_normal': Cyclic partitioning with factor 49 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:105:12)
+INFO: [HLS 214-248] Applying array_partition to 'temp_reverse': Cyclic partitioning with factor 49 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:107:9)
+INFO: [HLS 214-248] Applying array_partition to 'in_buf': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:57:23)
+INFO: [HLS 214-248] Applying array_partition to 'out_buf': Complete partitioning on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:58:27)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'in_buf1' with compact=bit mode in 8-bits (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:57:23)
+INFO: [HLS 214-241] Aggregating fifo (hls::stream) variable 'out_buf2' with compact=bit mode in 8-bits (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:58:27)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE6fw2_v1': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:90:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE6fw2_v2': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:91:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE6bw2_v1': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:92:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE6bw2_v2': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:93:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE7fwr2_v1': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:94:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE7fwr2_v2': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:95:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE7bwr2_v1': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:96:0)
+INFO: [HLS 214-248] Applying array_reshape to '_ZZ12alveo_hls4mlE7bwr2_v2': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:97:0)
+INFO: [HLS 214-248] Applying array_reshape to 'weights_com': Block reshaping with factor 768 on dimension 1. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:25:33)
+INFO: [HLS 214-115] Multiple burst reads of length 3577 and bit width 8 in loop 'VITIS_LOOP_70_1'(/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:70:19) has been inferred on bundle 'gmem0'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:70:24)
+INFO: [HLS 214-115] Multiple burst writes of length 1024 and bit width 8 in loop 'VITIS_LOOP_86_2'(/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:86:22) has been inferred on bundle 'gmem10'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:86:26)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 512 has been inferred on bundle 'gmem2'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 512 has been inferred on bundle 'gmem3'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 512 has been inferred on bundle 'gmem4'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 588 and bit width 512 has been inferred on bundle 'gmem5'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 6144 and bit width 512 has been inferred on bundle 'gmem6'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 6144 and bit width 512 has been inferred on bundle 'gmem7'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 6144 and bit width 512 has been inferred on bundle 'gmem8'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 214-115] Multiple burst reads of length 6144 and bit width 512 has been inferred on bundle 'gmem9'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:42:20)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1716.31 seconds. CPU system time: 2.85 seconds. Elapsed time: 1723.34 seconds; current allocated memory: 886.059 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0.02 seconds. CPU system time: 0 seconds. Elapsed time: 0.02 seconds; current allocated memory: 886.059 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 327.25 seconds. CPU system time: 0.73 seconds. Elapsed time: 328.05 seconds; current allocated memory: 1.050 GB.
+INFO: [HLS 200-10] Checking synthesizability ...
+WARNING: [SYNCHK 200-23] /home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:67: variable-indexed range selection may cause suboptimal QoR.
+INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 125.89 seconds. CPU system time: 0.52 seconds. Elapsed time: 126.63 seconds; current allocated memory: 1.199 GB.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_70_1_proc' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:72) to a process function for dataflow in function 'kernel'.
+INFO: [XFORM 203-721] Changing loop 'Loop_VITIS_LOOP_86_2_proc' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:88) to a process function for dataflow in function 'kernel'.
+INFO: [XFORM 203-712] Applying dataflow to function 'myproject' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp:44:1), detected/extracted 1 process function(s): 
+	 'nnet::bidirectional_single<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [XFORM 203-712] Applying dataflow to function 'kernel' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp:63:1), detected/extracted 4 process function(s): 
+	 'entry_proc'
+	 'kernel_Loop_VITIS_LOOP_70_1_proc22'
+	 'myproject'
+	 'kernel_Loop_VITIS_LOOP_86_2_proc23'.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:56:9) to (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:55:5) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_1>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:56:9) to (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:55:5) in function 'nnet::dense_resource_rf_leq_nin<ap_fixed<8, 1, (ap_q_mode)4, (ap_o_mode)0, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2_2>'... converting 4 basic blocks.
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:130:9) to (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:129:23) in function 'nnet::bidirectional_single<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'... converting 4 basic blocks.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 178.26 seconds. CPU system time: 0.41 seconds. Elapsed time: 178.82 seconds; current allocated memory: 1.479 GB.
+INFO: [XFORM 203-541] Flattening a loop nest 'VITIS_LOOP_115_1' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:115:32) in function 'nnet::bidirectional_single<ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<8, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, config2>'.
+INFO: [HLS 200-472] Inferring partial write operation for 'h_state.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:467:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'inputacc_zr.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:485:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_zr.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_activation.h:475:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_state_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:497:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'inputacc_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:504:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_activation.h:490:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'h_state.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:514:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'h_newstate' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:515:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'h_state.V.1' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:467:21)
+INFO: [HLS 200-472] Inferring partial write operation for 'inputacc_zr.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:485:27)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_zr.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_activation.h:475:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_state_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:497:23)
+INFO: [HLS 200-472] Inferring partial write operation for 'inputacc_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:504:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'tmpres_h.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_activation.h:490:17)
+INFO: [HLS 200-472] Inferring partial write operation for 'h_state.V.1' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:514:16)
+INFO: [HLS 200-472] Inferring partial write operation for 'h_newstate' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:515:26)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:560:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_recurrent.h:560:9)
+INFO: [HLS 200-472] Inferring partial write operation for 'weights_com.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:67:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:92:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:93:44)
+INFO: [HLS 200-472] Inferring partial write operation for 'weights_com.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:67:37)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:92:24)
+INFO: [HLS 200-472] Inferring partial write operation for 'res' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:93:44)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp_normal.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:119:49)
+INFO: [HLS 200-472] Inferring partial write operation for 'temp_reverse.V' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_bidirectional.h:120:77)
+INFO: [HLS 200-472] Inferring partial write operation for 'fw2_v1' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:44:14)
+INFO: [HLS 200-472] Inferring partial write operation for 'fwr2_v1' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp:44:14)
+INFO: [XFORM 203-531] Rewinding loop 'ReuseLoop' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:58) in function 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed<8,1,5,3,0>,config2_2>'.
+INFO: [XFORM 203-531] Rewinding loop 'ReuseLoop' (/home/user/yanlun/RAE/bidirectional_part_unroll/src/nnet_utils/nnet_dense_resource.h:58) in function 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed<8,1,5,3,0>,config2_1>'.
+WARNING: [HLS 200-1449] Process myproject has both a predecessor and reads an input from its caller (see the GUI dataflow viewer). This may lead to lower throughput. Consider copying this input via a predecessor process.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 71.71 seconds. CPU system time: 0.25 seconds. Elapsed time: 73.78 seconds; current allocated memory: 2.063 GB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'alveo_hls4ml' ...
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_465_1' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_465_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_471_2' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_471_2'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_1>_Pipeline_Result' to 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_1_Pipeline_Result'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed<8,1,5,3,0>,config2_1>' to 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_2>_Pipeline_Result' to 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_2_Pipeline_Result'.
+WARNING: [SYN 201-103] Legalizing function name 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed<8,1,5,3,0>,config2_2>' to 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_2_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_482_3' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_482_3'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_468_1' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_468_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_495_4' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_495_4'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_501_5' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_501_5'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_483_1' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_483_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_512_6' to 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_512_6'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config2_f>' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_stack<ap_fixed,ap_fixed,config2_f>_Pipeline_VITIS_LOOP_558_4' to 'gru_stack_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_558_4'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_stack<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config2_f>' to 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_465_1' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_465_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_471_2' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_471_2'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_482_3' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_482_3'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_468_1' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_468_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_495_4' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_495_4'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_501_5' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_501_5'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_483_1' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_483_1'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_512_6' to 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_512_6'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_static<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config2_b>' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_stack<ap_fixed,ap_fixed,config2_b>_Pipeline_VITIS_LOOP_558_4' to 'gru_stack_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_558_4'.
+WARNING: [SYN 201-103] Legalizing function name 'gru_stack<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config2_b>' to 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s'.
+WARNING: [SYN 201-103] Legalizing function name 'bidirectional_single<ap_fixed,ap_fixed,config2>_Pipeline_VITIS_LOOP_129_3' to 'bidirectional_single_ap_fixed_ap_fixed_config2_Pipeline_VITIS_LOOP_129_3'.
+WARNING: [SYN 201-103] Legalizing function name 'bidirectional_single<ap_fixed<8, 1, 5, 3, 0>, ap_fixed<8, 1, 5, 3, 0>, config2>' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s'.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 3.75 seconds. CPU system time: 0.11 seconds. Elapsed time: 5.64 seconds; current allocated memory: 2.077 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.01 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.13 seconds; current allocated memory: 2.077 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_70_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_70_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.68 seconds; current allocated memory: 2.078 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.078 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_Loop_VITIS_LOOP_70_1_proc22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.13 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.54 seconds; current allocated memory: 2.079 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.31 seconds. CPU system time: 0 seconds. Elapsed time: 0.51 seconds; current allocated memory: 2.079 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bidirectional_single_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_115_1_VITIS_LOOP_116_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 2, loop 'VITIS_LOOP_115_1_VITIS_LOOP_116_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.54 seconds. CPU system time: 0 seconds. Elapsed time: 0.92 seconds; current allocated memory: 2.081 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.33 seconds. CPU system time: 0 seconds. Elapsed time: 0.72 seconds; current allocated memory: 2.081 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_465_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_465_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_465_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.28 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.81 seconds; current allocated memory: 2.082 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.55 seconds; current allocated memory: 2.082 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_471_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_471_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_471_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.74 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.08 seconds; current allocated memory: 2.101 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.82 seconds. CPU system time: 0 seconds. Elapsed time: 0.9 seconds; current allocated memory: 2.115 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_1_Pipeline_Result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_1>_Pipeline_Result': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-61] Pipelining loop 'Result'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Result'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.19 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.36 seconds; current allocated memory: 2.116 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 2.116 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul) to 3 in order to utilize available DSP registers.
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'ReuseLoop': contains subfunction 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_1>_Pipeline_Result' which is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 9.78 seconds. CPU system time: 0.05 seconds. Elapsed time: 9.96 seconds; current allocated memory: 2.179 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 7.76 seconds. CPU system time: 0.02 seconds. Elapsed time: 8.04 seconds; current allocated memory: 2.179 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_2_Pipeline_Result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for function 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_2>_Pipeline_Result': contains subloop(s) that are not unrolled.
+INFO: [SCHED 204-61] Pipelining loop 'Result'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'Result'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8.17 seconds. CPU system time: 0.03 seconds. Elapsed time: 8.52 seconds; current allocated memory: 2.179 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.31 seconds; current allocated memory: 2.179 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+WARNING: [SCHED 204-67] Unable to satisfy pipeline directive for loop 'ReuseLoop': contains subfunction 'dense_resource_rf_leq_nin<ap_fixed,ap_fixed,config2_2>_Pipeline_Result' which is not pipelined.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 17.07 seconds. CPU system time: 0.11 seconds. Elapsed time: 17.36 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8.79 seconds. CPU system time: 0.78 seconds. Elapsed time: 10.55 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_482_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_482_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_482_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 8.02 seconds. CPU system time: 0.15 seconds. Elapsed time: 8.48 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.3 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_468_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_468_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_468_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.6 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_495_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_495_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_495_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.92 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.21 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_501_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_501_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_501_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.48 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_483_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_483_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_483_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.76 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.29 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln813) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_512_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_512_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.61 seconds. CPU system time: 0 seconds. Elapsed time: 1.95 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.63 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.75 seconds. CPU system time: 0.01 seconds. Elapsed time: 1 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.47 seconds. CPU system time: 0 seconds. Elapsed time: 6.05 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_stack_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_558_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_558_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_558_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.08 seconds. CPU system time: 0.02 seconds. Elapsed time: 12.49 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.17 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.32 seconds. CPU system time: 0 seconds. Elapsed time: 4.5 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_465_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_465_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 1, loop 'VITIS_LOOP_465_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.39 seconds. CPU system time: 0.04 seconds. Elapsed time: 12.62 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.4 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_471_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_471_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_471_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 2.71 seconds. CPU system time: 0.02 seconds. Elapsed time: 3.34 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.85 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.18 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_482_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_482_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_482_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.78 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.23 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.44 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_468_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_468_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_468_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.49 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.23 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_495_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_495_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_495_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.41 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_501_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_501_5'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_501_5'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.34 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.97 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_483_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_483_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 3, loop 'VITIS_LOOP_483_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.43 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=mul_ln813) to 3 in order to utilize available DSP registers.
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_512_6'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 5, loop 'VITIS_LOOP_512_6'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 1.61 seconds. CPU system time: 0.01 seconds. Elapsed time: 2 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.37 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.75 seconds. CPU system time: 0 seconds. Elapsed time: 1.59 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.48 seconds. CPU system time: 0.02 seconds. Elapsed time: 4.67 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_stack_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_558_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_558_4'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_558_4'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.27 seconds. CPU system time: 0.11 seconds. Elapsed time: 12.74 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.28 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.23 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 4.31 seconds. CPU system time: 0 seconds. Elapsed time: 4.78 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bidirectional_single_ap_fixed_ap_fixed_config2_Pipeline_VITIS_LOOP_129_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_129_3'.
+INFO: [HLS 200-1470] Pipelining result : Target II = NA, Final II = 1, Depth = 2, loop 'VITIS_LOOP_129_3'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 12.35 seconds. CPU system time: 0.03 seconds. Elapsed time: 12.56 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.31 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.12 seconds. CPU system time: 0 seconds. Elapsed time: 0.67 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8.89 seconds. CPU system time: 0 seconds. Elapsed time: 9.18 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 24.69 seconds. CPU system time: 0.02 seconds. Elapsed time: 24.93 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8.58 seconds. CPU system time: 0.01 seconds. Elapsed time: 8.94 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_86_2'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_86_2'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 25.72 seconds. CPU system time: 0.02 seconds. Elapsed time: 26.07 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.24 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel_Loop_VITIS_LOOP_86_2_proc23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.73 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.32 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.2 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 8.68 seconds. CPU system time: 0.01 seconds. Elapsed time: 8.95 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 25.84 seconds. CPU system time: 0.04 seconds. Elapsed time: 26.1 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.35 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.53 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.45 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.95 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.5 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.11 seconds. CPU system time: 0 seconds. Elapsed time: 0.6 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.54 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 0.75 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.3 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.7 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.42 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.1 seconds. CPU system time: 0 seconds. Elapsed time: 1.37 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-61] Pipelining loop 'VITIS_LOOP_42_1'.
+INFO: [HLS 200-1470] Pipelining result : Target II = 1, Final II = 1, Depth = 3, loop 'VITIS_LOOP_42_1'
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.09 seconds. CPU system time: 0 seconds. Elapsed time: 0.75 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.06 seconds. CPU system time: 0 seconds. Elapsed time: 0.56 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'alveo_hls4ml' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.2 seconds. CPU system time: 0 seconds. Elapsed time: 0.52 seconds; current allocated memory: 2.366 GB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 9.04 seconds. CPU system time: 0.01 seconds. Elapsed time: 9.99 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'entry_proc' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'entry_proc'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 26.04 seconds. CPU system time: 0.04 seconds. Elapsed time: 26.23 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1' pipeline 'VITIS_LOOP_70_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1/m_axi_gmem0_ARUSER' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_Loop_VITIS_LOOP_70_1_proc22_Pipeline_VITIS_LOOP_70_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.11 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.13 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_Loop_VITIS_LOOP_70_1_proc22' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_Loop_VITIS_LOOP_70_1_proc22'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.36 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bidirectional_single_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bidirectional_single_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2' pipeline 'VITIS_LOOP_115_1_VITIS_LOOP_116_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bidirectional_single_Pipeline_VITIS_LOOP_115_1_VITIS_LOOP_116_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.15 seconds. CPU system time: 0 seconds. Elapsed time: 0.6 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_465_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_465_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.79 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_471_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_471_2' pipeline 'VITIS_LOOP_471_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_471_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.75 seconds. CPU system time: 0 seconds. Elapsed time: 1.11 seconds; current allocated memory: 2.366 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_1_Pipeline_Result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_76810_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_1_Pipeline_Result'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.38 seconds. CPU system time: 0.06 seconds. Elapsed time: 1.58 seconds; current allocated memory: 2.368 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s_weights_com_V_RAM_AUTO_1R1W' to 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s_weights_combkb' due to the length limit 80
+INFO: [RTGEN 206-104] Estimated max fanout for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s' is 12294 from HDL expression: (1'b1 == ap_CS_fsm_state20)
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_15_1_1': 768 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_mul_16ns_17ns_33_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_496_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'urem_16ns_7ns_16_20_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_1_s_weights_combkb' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 3.69 seconds. CPU system time: 0.03 seconds. Elapsed time: 4.28 seconds; current allocated memory: 2.449 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_2_Pipeline_Result' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Generating core module 'mux_76810_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_config2_2_Pipeline_Result'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 21.5 seconds. CPU system time: 0.19 seconds. Elapsed time: 24.89 seconds; current allocated memory: 2.559 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-104] Estimated max fanout for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_2_s' is 12288 from HDL expression: (1'b1 == ap_CS_fsm_state4)
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8s_15_1_1': 768 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5129_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'dense_resource_rf_leq_nin_ap_fixed_ap_fixed_8_1_5_3_0_config2_2_s'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 2.82 seconds. CPU system time: 0.07 seconds. Elapsed time: 3.28 seconds; current allocated memory: 2.650 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_482_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_482_3' pipeline 'VITIS_LOOP_482_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_482_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 22.18 seconds. CPU system time: 0.23 seconds. Elapsed time: 22.96 seconds; current allocated memory: 2.780 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_468_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_468_1' pipeline 'VITIS_LOOP_468_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_468_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 2.804 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_495_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_495_4' pipeline 'VITIS_LOOP_495_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_495_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0 seconds. Elapsed time: 0.61 seconds; current allocated memory: 2.804 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_501_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_501_5' pipeline 'VITIS_LOOP_501_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_501_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.5 seconds; current allocated memory: 2.804 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_483_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_483_1' pipeline 'VITIS_LOOP_483_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_483_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 2.804 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_512_6' pipeline 'VITIS_LOOP_512_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9s_8s_15s_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5129_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_512_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.02 seconds. CPU system time: 0.03 seconds. Elapsed time: 1.44 seconds; current allocated memory: 2.804 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_V_RAM_AUcud' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_RAM_AUTO_dEe' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_state_zr_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_state_zr_eOg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_state_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_state_h_VfYi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_zr_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_zr_V_RAM_g8j' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_h_V_RAM_Ahbi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_inputacc_zr_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_inputacc_zr_V_RAibs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_inputacc_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_inputacc_h_V_RAMjbC' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_V_RAM_AUcud' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_RAM_AUTO_dEe' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_state_h_VfYi' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_tmpres_zr_V_RAM_g8j' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.61 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.67 seconds; current allocated memory: 2.811 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_stack_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_558_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_stack_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_558_4' pipeline 'VITIS_LOOP_558_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_stack_ap_fixed_ap_fixed_config2_f_Pipeline_VITIS_LOOP_558_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.6 seconds. CPU system time: 0.02 seconds. Elapsed time: 16.72 seconds; current allocated memory: 2.839 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_RAM_AUTO_1R1W' to 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_RAM_AUTO_kbM' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_f_s_h_state_RAM_AUTO_kbM' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.37 seconds; current allocated memory: 2.852 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_465_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_465_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.5 seconds. CPU system time: 0.02 seconds. Elapsed time: 12.66 seconds; current allocated memory: 2.854 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_471_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_471_2' pipeline 'VITIS_LOOP_471_2' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_471_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.83 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.05 seconds; current allocated memory: 2.856 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_482_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_482_3' pipeline 'VITIS_LOOP_482_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_482_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.37 seconds. CPU system time: 0.08 seconds. Elapsed time: 3.17 seconds; current allocated memory: 2.894 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_468_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_468_1' pipeline 'VITIS_LOOP_468_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_468_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 3.22 seconds; current allocated memory: 2.910 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_495_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_495_4' pipeline 'VITIS_LOOP_495_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_495_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.17 seconds. CPU system time: 0 seconds. Elapsed time: 0.59 seconds; current allocated memory: 2.910 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_501_5' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_501_5' pipeline 'VITIS_LOOP_501_5' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_501_5'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.19 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.71 seconds; current allocated memory: 2.911 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_483_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_483_1' pipeline 'VITIS_LOOP_483_1' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_483_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0 seconds. Elapsed time: 2.47 seconds; current allocated memory: 2.912 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_512_6' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_512_6' pipeline 'VITIS_LOOP_512_6' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_9s_8s_15s_15_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mul_8s_8ns_15_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'mux_5129_8_1_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_512_6'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.05 seconds. CPU system time: 0.01 seconds. Elapsed time: 6.5 seconds; current allocated memory: 2.913 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state_V_1_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state_V_1_RAM_lbW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_RAM_AUTO_mb6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_state_zr_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_state_zr_ncg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_state_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_state_h_Vocq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_zr_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_zr_V_RAM_pcA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_h_V_RAM_AqcK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_inputacc_zr_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_inputacc_zr_V_RArcU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_inputacc_h_V_RAM_AUTO_1R1W' to 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_inputacc_h_V_RAMsc4' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state_V_1_RAM_lbW' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_RAM_AUTO_mb6' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_state_h_Vocq' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_tmpres_zr_V_RAM_pcA' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.63 seconds. CPU system time: 0.02 seconds. Elapsed time: 10.58 seconds; current allocated memory: 2.919 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_stack_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_558_4' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'gru_stack_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_558_4' pipeline 'VITIS_LOOP_558_4' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_stack_ap_fixed_ap_fixed_config2_b_Pipeline_VITIS_LOOP_558_4'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.58 seconds. CPU system time: 0.05 seconds. Elapsed time: 16.07 seconds; current allocated memory: 2.929 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state10_RAM_AUTO_1R1W' to 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state10_RAM_AUTtde' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_gru_stack_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_b_s_h_state10_RAM_AUTtde' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.2 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.67 seconds; current allocated memory: 2.929 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bidirectional_single_ap_fixed_ap_fixed_config2_Pipeline_VITIS_LOOP_129_3' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'bidirectional_single_ap_fixed_ap_fixed_config2_Pipeline_VITIS_LOOP_129_3' pipeline 'VITIS_LOOP_129_3' pipeline type 'loop pipeline'
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bidirectional_single_ap_fixed_ap_fixed_config2_Pipeline_VITIS_LOOP_129_3'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 12.51 seconds. CPU system time: 0.04 seconds. Elapsed time: 12.97 seconds; current allocated memory: 2.930 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norudo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_1_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norvdy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_2_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norwdI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_3_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norxdS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_4_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_noryd2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_5_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norzec' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_6_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norAem' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_7_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norBew' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_8_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norCeG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_9_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norDeQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_10_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norEe0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_11_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norFfa' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_12_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norGfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_13_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norHfu' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_14_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norIfE' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_15_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norJfO' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_16_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norKfY' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_17_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norLf8' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_18_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norMgi' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_19_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norNgs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_20_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norOgC' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_21_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norPgM' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_22_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norQgW' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_23_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norRg6' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_24_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norShg' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_25_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norThq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_26_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norUhA' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_27_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norVhK' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_28_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norWhU' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_29_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norXh4' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_30_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norYie' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_31_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norZio' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_32_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor0iy' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_33_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor1iI' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_34_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor2iS' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_35_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor3i2' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_36_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor4jc' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_37_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor5jm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_38_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor6jw' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_39_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor7jG' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_40_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor8jQ' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_41_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_nor9j0' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_42_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbak' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_43_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbbk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_44_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbck' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_45_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbdk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_46_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbek' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_47_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbfk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_normal_V_48_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norbgk' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbhl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_1_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbil' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_2_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbjl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_3_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbkl' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_4_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbll' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_5_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbml' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_6_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbnm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_7_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbom' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_8_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbpm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_9_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbqm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_10_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbrm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_11_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbsm' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_12_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbtn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_13_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbun' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_14_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbvn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_15_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbwn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_16_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbxn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_17_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbyn' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_18_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbzo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_19_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbAo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_20_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbBo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_21_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbCo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_22_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbDo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_23_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbEo' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_24_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbFp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_25_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbGp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_26_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbHp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_27_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbIp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_28_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbJp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_29_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbKp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_30_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbLp' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_31_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbMq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_32_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbNq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_33_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbOq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_34_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbPq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_35_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbQq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_36_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbRq' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_37_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbSr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_38_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbTr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_39_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbUr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_40_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbVr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_41_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbWr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_42_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbXr' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_43_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbYs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_44_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revbZs' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_45_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revb0s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_46_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revb1s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_47_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revb2s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_reverse_V_48_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_revb3s' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_forwardgru_out_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_forwardgb4t' due to the length limit 80
+INFO: [SYN 201-210] Renamed object name 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_backwardgru_out_RAM_AUTO_1R1W' to 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_backwardb5t' due to the length limit 80
+INFO: [RTGEN 206-100] Finished creating RTL model for 'bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_temp_norudo' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_bidirectional_single_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config2_s_forwardgb4t' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 1.24 seconds. CPU system time: 0.05 seconds. Elapsed time: 43.2 seconds; current allocated memory: 2.959 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'myproject' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'myproject'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 27.82 seconds. CPU system time: 0.05 seconds. Elapsed time: 33.24 seconds; current allocated memory: 2.966 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2' pipeline 'VITIS_LOOP_86_2' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2/m_axi_gmem10_BREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_Loop_VITIS_LOOP_86_2_proc23_Pipeline_VITIS_LOOP_86_2'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 26.04 seconds. CPU system time: 0.06 seconds. Elapsed time: 32.52 seconds; current allocated memory: 2.970 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel_Loop_VITIS_LOOP_86_2_proc23' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel_Loop_VITIS_LOOP_86_2_proc23'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.18 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.27 seconds; current allocated memory: 2.970 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'kernel' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_AWUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WDATA' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WSTRB' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WLAST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_WUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem0_BREADY' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_ARUSER' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'kernel/m_axi_gmem10_RREADY' to 0.
+INFO: [RTGEN 206-100] Finished creating RTL model for 'kernel'.
+INFO: [RTMG 210-285] Implementing FIFO 'out_c_U(alveo_hls4ml_fifo_w64_d4_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'in_buf1_U(alveo_hls4ml_fifo_w8_d73_S)' using Shift Registers.
+INFO: [RTMG 210-285] Implementing FIFO 'out_buf2_U(alveo_hls4ml_fifo_w8_d1024_A)' using Vivado Default RAMs.
+INFO: [RTMG 210-285] Implementing FIFO 'start_for_kernel_Loop_VITIS_LOOP_86_2_proc23_U0_U(alveo_hls4ml_start_for_kernel_Loop_VITIS_LOOP_86_2_proc23_U0)' using Shift Registers.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.47 seconds. CPU system time: 0.02 seconds. Elapsed time: 11.7 seconds; current allocated memory: 2.972 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1/m_axi_gmem2_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1' is 6150 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_1'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 26.07 seconds. CPU system time: 0.09 seconds. Elapsed time: 27.12 seconds; current allocated memory: 2.974 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114/m_axi_gmem3_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114' is 6150 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_114'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.02 seconds. Elapsed time: 2 seconds; current allocated memory: 2.975 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115/m_axi_gmem4_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115' is 6150 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_115'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.35 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.31 seconds; current allocated memory: 2.977 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116/m_axi_gmem5_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116' is 6150 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_116'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.37 seconds. CPU system time: 0.02 seconds. Elapsed time: 1.85 seconds; current allocated memory: 2.978 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117/m_axi_gmem6_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117' is 6153 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_117'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.41 seconds. CPU system time: 0.01 seconds. Elapsed time: 2.05 seconds; current allocated memory: 2.980 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118/m_axi_gmem7_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118' is 6153 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_118'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.33 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.24 seconds; current allocated memory: 2.981 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119/m_axi_gmem8_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119' is 6153 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_119'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.36 seconds. CPU system time: 0 seconds. Elapsed time: 1.84 seconds; current allocated memory: 2.983 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-1030] Apply Unified Pipeline Control on module 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120' pipeline 'VITIS_LOOP_42_1' pipeline type 'loop pipeline'
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARVALID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARADDR' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARID' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARLEN' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARSIZE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARBURST' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARLOCK' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARCACHE' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARPROT' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARQOS' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARREGION' to 0.
+WARNING: [RTGEN 206-101] Setting dangling out port 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120/m_axi_gmem9_ARUSER' to 0.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120' is 6153 from HDL expression: ((ap_enable_reg_pp0_iter2 == 1'b1) & (1'b0 == ap_block_pp0_stage0))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml_Pipeline_VITIS_LOOP_42_120'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.34 seconds. CPU system time: 0.01 seconds. Elapsed time: 1.4 seconds; current allocated memory: 2.984 GB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'alveo_hls4ml' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem0' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem2' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem3' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem4' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem5' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem6' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem7' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem8' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem9' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/gmem10' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/con' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_fw2_v1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_fw2_v2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_bw2_v1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_bw2_v2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_fwr2_v1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_fwr2_v2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_bwr2_v1' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/in_bwr2_v2' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'alveo_hls4ml/out_r' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'alveo_hls4ml' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'con', 'in_r', 'in_fw2_v1', 'in_fw2_v2', 'in_bw2_v1', 'in_bw2_v2', 'in_fwr2_v1', 'in_fwr2_v2', 'in_bwr2_v1', 'in_bwr2_v2', 'out_r' and 'return' to AXI-Lite port control.
+INFO: [RTGEN 206-104] Estimated max fanout for 'alveo_hls4ml' is 6212 from HDL expression: ((icmp_ln99_reg_582 == 1'd1) & (1'b1 == ap_CS_fsm_state75))
+INFO: [RTGEN 206-100] Finished creating RTL model for 'alveo_hls4ml'.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_fw2_v1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [RTMG 210-278] Implementing memory 'alveo_hls4ml_fwr2_v1_RAM_AUTO_1R1W' using auto RAMs.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.58 seconds. CPU system time: 0.02 seconds. Elapsed time: 2.03 seconds; current allocated memory: 2.985 GB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 37.47 seconds. CPU system time: 0.14 seconds. Elapsed time: 38.86 seconds; current allocated memory: 2.992 GB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 38.73 seconds. CPU system time: 0.18 seconds. Elapsed time: 38.93 seconds; current allocated memory: 3.039 GB.
+INFO: [VHDL 208-304] Generating VHDL RTL for alveo_hls4ml.
+INFO: [VLOG 209-307] Generating Verilog RTL for alveo_hls4ml.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 342.47 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 3001.13 seconds. CPU system time: 10.54 seconds. Elapsed time: 3217.21 seconds; current allocated memory: 2.302 GB.
+INFO: [HLS 200-1510] Running: export_design 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1741.133 ; gain = 84.992 ; free physical = 272475 ; free virtual = 377695
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2022.2/data/ip'.
+Running package_xo -xo_path /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/impl/export.xo -kernel_name alveo_hls4ml -kernel_xml /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/impl/ip/../kernel/kernel.xml -kernel_files {/home/user/yanlun/RAE/bidirectional_part_unroll/src/kernel.cpp /home/user/yanlun/RAE/bidirectional_part_unroll/src/myproject.cpp /home/user/yanlun/RAE/bidirectional_part_unroll/src/alveo_hls4ml.cpp} -ip_directory /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/impl/ip/ip_unzip_dir -design_xml /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/.autopilot/db/alveo_hls4ml.design.xml -debug_directory /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/.debug -hls_directory /home/user/yanlun/RAE/bidirectional_part_unroll/_x.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml/alveo_hls4ml/alveo_hls4ml/solution/impl/ip/hls_files
+INFO: [Common 17-206] Exiting Vivado at Sat Sep 16 17:54:20 2023...
+INFO: [HLS 200-802] Generated output file alveo_hls4ml/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 295.32 seconds. CPU system time: 1.9 seconds. Elapsed time: 308.99 seconds; current allocated memory: 15.629 MB.
+INFO: [HLS 200-1510] Running: close_project 
+HLS completed successfully
+INFO: [HLS 200-112] Total CPU user time: 3299.41 seconds. Total CPU system time: 12.99 seconds. Total elapsed time: 3530.75 seconds; peak allocated memory: 3.054 GB.
+INFO: [Common 17-206] Exiting vitis_hls at Sat Sep 16 17:54:33 2023...
