@@ -1,24 +1,26 @@
-# LFADs
-## Vitis version 2019.2
+# RAE
+## Target platform : Alveo U55C (NRP)
+## Vitis version 2022.2
 ## Activate the tool 
 ```bash
-source /opt/Xilinx/Vitis/2019.2/settings64.sh # Vitis
-source /opt/xilinx/xrt/setup.sh # Vitis XRT
+source ~/setup_vitis_2022_2.sh 
 ```
 ## Compile project
 ```bash
 make cleanall # clean all of the related files
-make check TARGET=sw_emu DEVICE=xilinx_u50_xdma_201920_1 all  # software emulation
-make check TARGET=hw_emu DEVICE=xilinx_u50_xdma_201920_1 all  # hardware emulation
-make TARGET=hw DEVICE=xilinx_u50_xdma_201920_1 all # build
+make check TARGET=sw_emu DEVICE=xilinx_u55c_gen3x16_xdma_3_202210_1 all  # software emulation
+make check TARGET=hw_emu DEVICE=xilinx_u55c_gen3x16_xdma_3_202210_1 all  # hardware emulation
+make TARGET=hw DEVICE=xilinx_u55c_gen3x16_xdma_3_202210_1 all # build
 ```
 ## Run project
 ```bash
-XCL_EMULATION_MODE=sw_emu ./host ./build_dir.sw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # software emulation
-XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u50_xdma_201920_1/alveo_hls4ml.xclbin  # hardware emulation
-./host alveo_hls4ml.xclbin  # run on U50
+XCL_EMULATION_MODE=sw_emu ./host ./build_dir.sw_emu.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml.xclbin  # software emulation
+XCL_EMULATION_MODE=hw_emu ./host ./build_dir.hw_emu.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml.xclbin  # hardware emulation
+./host build_dir.hw.xilinx_u55c_gen3x16_xdma_3_202210_1/alveo_hls4ml.xclbin  # run on U50
 ```
 ## Some detail
 ```bash
-The model contains only GRU layer with stream as data transmission type.
+Full RAE model without Gaussian sampling.
+The weights are sent from host.
+Due to routing congestion problem, the running frequency is 100M HZ.
 ```
