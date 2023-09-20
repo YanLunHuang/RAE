@@ -1,0 +1,202 @@
+
+
+================================================================
+== Vitis HLS Report for 'pointwise_conv_1d_cl_single_ap_fixed_ap_fixed_config17_Pipeline_Write'
+================================================================
+* Date:           Tue Sep 19 13:55:48 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        alveo_hls4ml
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  1.398 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |       51|       51|  0.204 us|  0.204 us|   51|   51|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |          |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        | Loop Name|   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+        |- Write   |       49|       49|         2|          1|          1|    49|       yes|
+        +----------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       27|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        0|      213|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       45|    -|
+|Register             |        -|     -|       17|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|       17|      285|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +----------------------+---------------+---------+----+---+-----+-----+
+    |       Instance       |     Module    | BRAM_18K| DSP| FF| LUT | URAM|
+    +----------------------+---------------+---------+----+---+-----+-----+
+    |mux_496_8_1_1_U16508  |mux_496_8_1_1  |        0|   0|  0|  213|    0|
+    +----------------------+---------------+---------+----+---+-----+-----+
+    |Total                 |               |        0|   0|  0|  213|    0|
+    +----------------------+---------------+---------+----+---+-----+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------------+----------+----+---+----+------------+------------+
+    |       Variable Name       | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |add_ln37_fu_453_p2         |         +|   0|  0|  13|           6|           1|
+    |ap_block_pp0_stage0_01001  |       and|   0|  0|   2|           1|           1|
+    |icmp_ln37_fu_447_p2        |      icmp|   0|  0|  10|           6|           5|
+    |ap_enable_pp0              |       xor|   0|  0|   2|           1|           2|
+    +---------------------------+----------+----+---+----+------------+------------+
+    |Total                      |          |   0|  0|  27|          14|           9|
+    +---------------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-------------------------+----+-----------+-----+-----------+
+    |           Name          | LUT| Input Size| Bits| Total Bits|
+    +-------------------------+----+-----------+-----+-----------+
+    |ap_done_int              |   9|          2|    1|          2|
+    |ap_enable_reg_pp0_iter1  |   9|          2|    1|          2|
+    |ap_sig_allocacmp_i_1     |   9|          2|    6|         12|
+    |i_fu_134                 |   9|          2|    6|         12|
+    |layer17_out12_blk_n      |   9|          2|    1|          2|
+    +-------------------------+----+-----------+-----+-----------+
+    |Total                    |  45|         10|   15|         30|
+    +-------------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +-------------------------+---+----+-----+-----------+
+    |           Name          | FF| LUT| Bits| Const Bits|
+    +-------------------------+---+----+-----+-----------+
+    |ap_CS_fsm                |  1|   0|    1|          0|
+    |ap_done_reg              |  1|   0|    1|          0|
+    |ap_enable_reg_pp0_iter1  |  1|   0|    1|          0|
+    |i_fu_134                 |  6|   0|    6|          0|
+    |p_0_reg_578              |  8|   0|    8|          0|
+    +-------------------------+---+----+-----+-----------+
+    |Total                    | 17|   0|   17|          0|
+    +-------------------------+---+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits|  Protocol  |                              Source Object                             |    C Type    |
++------------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+|ap_clk                        |   in|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|ap_rst                        |   in|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|ap_start                      |   in|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|ap_done                       |  out|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|ap_idle                       |  out|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|ap_ready                      |  out|    1|  ap_ctrl_hs|  pointwise_conv_1d_cl_single<ap_fixed,ap_fixed,config17>_Pipeline_Write|  return value|
+|layer17_out12_din             |  out|    8|     ap_fifo|                                                           layer17_out12|       pointer|
+|layer17_out12_num_data_valid  |   in|    8|     ap_fifo|                                                           layer17_out12|       pointer|
+|layer17_out12_fifo_cap        |   in|    8|     ap_fifo|                                                           layer17_out12|       pointer|
+|layer17_out12_full_n          |   in|    1|     ap_fifo|                                                           layer17_out12|       pointer|
+|layer17_out12_write           |  out|    1|     ap_fifo|                                                           layer17_out12|       pointer|
+|res_V                         |   in|    8|     ap_none|                                                                   res_V|        scalar|
+|res_V_1                       |   in|    8|     ap_none|                                                                 res_V_1|        scalar|
+|res_V_2                       |   in|    8|     ap_none|                                                                 res_V_2|        scalar|
+|res_V_3                       |   in|    8|     ap_none|                                                                 res_V_3|        scalar|
+|res_V_4                       |   in|    8|     ap_none|                                                                 res_V_4|        scalar|
+|res_V_5                       |   in|    8|     ap_none|                                                                 res_V_5|        scalar|
+|res_V_6                       |   in|    8|     ap_none|                                                                 res_V_6|        scalar|
+|res_V_7                       |   in|    8|     ap_none|                                                                 res_V_7|        scalar|
+|res_V_8                       |   in|    8|     ap_none|                                                                 res_V_8|        scalar|
+|res_V_9                       |   in|    8|     ap_none|                                                                 res_V_9|        scalar|
+|res_V_10                      |   in|    8|     ap_none|                                                                res_V_10|        scalar|
+|res_V_11                      |   in|    8|     ap_none|                                                                res_V_11|        scalar|
+|res_V_12                      |   in|    8|     ap_none|                                                                res_V_12|        scalar|
+|res_V_13                      |   in|    8|     ap_none|                                                                res_V_13|        scalar|
+|res_V_14                      |   in|    8|     ap_none|                                                                res_V_14|        scalar|
+|res_V_15                      |   in|    8|     ap_none|                                                                res_V_15|        scalar|
+|res_V_16                      |   in|    8|     ap_none|                                                                res_V_16|        scalar|
+|res_V_17                      |   in|    8|     ap_none|                                                                res_V_17|        scalar|
+|res_V_18                      |   in|    8|     ap_none|                                                                res_V_18|        scalar|
+|res_V_19                      |   in|    8|     ap_none|                                                                res_V_19|        scalar|
+|res_V_20                      |   in|    8|     ap_none|                                                                res_V_20|        scalar|
+|res_V_21                      |   in|    8|     ap_none|                                                                res_V_21|        scalar|
+|res_V_22                      |   in|    8|     ap_none|                                                                res_V_22|        scalar|
+|res_V_23                      |   in|    8|     ap_none|                                                                res_V_23|        scalar|
+|res_V_24                      |   in|    8|     ap_none|                                                                res_V_24|        scalar|
+|res_V_25                      |   in|    8|     ap_none|                                                                res_V_25|        scalar|
+|res_V_26                      |   in|    8|     ap_none|                                                                res_V_26|        scalar|
+|res_V_27                      |   in|    8|     ap_none|                                                                res_V_27|        scalar|
+|res_V_28                      |   in|    8|     ap_none|                                                                res_V_28|        scalar|
+|res_V_29                      |   in|    8|     ap_none|                                                                res_V_29|        scalar|
+|res_V_30                      |   in|    8|     ap_none|                                                                res_V_30|        scalar|
+|res_V_31                      |   in|    8|     ap_none|                                                                res_V_31|        scalar|
+|res_V_32                      |   in|    8|     ap_none|                                                                res_V_32|        scalar|
+|res_V_33                      |   in|    8|     ap_none|                                                                res_V_33|        scalar|
+|res_V_34                      |   in|    8|     ap_none|                                                                res_V_34|        scalar|
+|res_V_35                      |   in|    8|     ap_none|                                                                res_V_35|        scalar|
+|res_V_36                      |   in|    8|     ap_none|                                                                res_V_36|        scalar|
+|res_V_37                      |   in|    8|     ap_none|                                                                res_V_37|        scalar|
+|res_V_38                      |   in|    8|     ap_none|                                                                res_V_38|        scalar|
+|res_V_39                      |   in|    8|     ap_none|                                                                res_V_39|        scalar|
+|res_V_40                      |   in|    8|     ap_none|                                                                res_V_40|        scalar|
+|res_V_41                      |   in|    8|     ap_none|                                                                res_V_41|        scalar|
+|res_V_42                      |   in|    8|     ap_none|                                                                res_V_42|        scalar|
+|res_V_43                      |   in|    8|     ap_none|                                                                res_V_43|        scalar|
+|res_V_44                      |   in|    8|     ap_none|                                                                res_V_44|        scalar|
+|res_V_45                      |   in|    8|     ap_none|                                                                res_V_45|        scalar|
+|res_V_46                      |   in|    8|     ap_none|                                                                res_V_46|        scalar|
+|res_V_47                      |   in|    8|     ap_none|                                                                res_V_47|        scalar|
+|res_V_48                      |   in|    8|     ap_none|                                                                res_V_48|        scalar|
++------------------------------+-----+-----+------------+------------------------------------------------------------------------+--------------+
+

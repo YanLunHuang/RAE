@@ -1,0 +1,157 @@
+
+
+================================================================
+== Vitis HLS Report for 'gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack'
+================================================================
+* Date:           Tue Sep 19 13:54:08 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        alveo_hls4ml
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.560 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+-----+-----+---------+
+    |  Latency (cycles) |  Latency (absolute) |  Interval | Pipeline|
+    |   min   |   max   |    min   |    max   | min | max |   Type  |
+    +---------+---------+----------+----------+-----+-----+---------+
+    |      514|      514|  2.056 us|  2.056 us|  514|  514|       no|
+    +---------+---------+----------+----------+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |            |  Latency (cycles) | Iteration|  Initiation Interval  | Trip |          |
+        |  Loop Name |   min   |   max   |  Latency |  achieved |   target  | Count| Pipelined|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+        |- DataPack  |      512|      512|         2|          1|          1|   512|       yes|
+        +------------+---------+---------+----------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|       13|    16666|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|        -|        -|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|       45|    -|
+|Register             |        -|     -|     4119|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     4132|    16711|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        3|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    N/A
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +-------------------------------+----------+----+----+------+------------+------------+
+    |         Variable Name         | Operation| DSP| FF |  LUT | Bitwidth P0| Bitwidth P1|
+    +-------------------------------+----------+----+----+------+------------+------------+
+    |add_ln51_fu_94_p2              |         +|   0|   0|    17|          10|           1|
+    |ap_frp_data_req_in2_buf2       |         -|   0|  13|     4|           2|           1|
+    |and_ln53_fu_135_p2             |       and|   0|   0|  4096|        4096|        4096|
+    |ap_condition_frp_pvb_pf_start  |       and|   0|   0|     2|           1|           1|
+    |icmp_ln51_fu_88_p2             |      icmp|   0|   0|    11|          10|          11|
+    |or_ln53_fu_151_p2              |        or|   0|   0|  4096|        4096|        4096|
+    |shl_ln53_1_fu_145_p2           |       shl|   0|   0|  2171|        4096|        4096|
+    |shl_ln53_fu_123_p2             |       shl|   0|   0|  2171|           8|        4096|
+    |ap_enable_pp0                  |       xor|   0|   0|     2|           1|           2|
+    |xor_ln53_fu_129_p2             |       xor|   0|   0|  4096|        4096|           2|
+    +-------------------------------+----------+----+----+------+------------+------------+
+    |Total                          |          |   0|  13| 16666|       16416|       16402|
+    +-------------------------------+----------+----+----+------+------------+------------+
+
+    * Multiplexer: 
+    +---------------------------+----+-----------+------+-----------+
+    |            Name           | LUT| Input Size| Bits | Total Bits|
+    +---------------------------+----+-----------+------+-----------+
+    |ap_done_int                |   9|          2|     1|          2|
+    |ap_frp_data_req_in2_buf2   |   9|          2|     2|          4|
+    |ap_sig_allocacmp_i_pack_2  |   9|          2|    10|         20|
+    |data_in_V_fu_52            |   9|          2|  4096|       8192|
+    |i_pack_fu_48               |   9|          2|    10|         20|
+    +---------------------------+----+-----------+------+-----------+
+    |Total                      |  45|         10|  4119|       8238|
+    +---------------------------+----+-----------+------+-----------+
+
+    * Register: 
+    +--------------------------+------+----+------+-----------+
+    |           Name           |  FF  | LUT| Bits | Const Bits|
+    +--------------------------+------+----+------+-----------+
+    |ap_CS_fsm                 |     1|   0|     1|          0|
+    |ap_done_reg               |     1|   0|     1|          0|
+    |ap_frp_data_req_in2_buf2  |     2|   0|     2|          0|
+    |data_in_V_fu_52           |  4096|   0|  4096|          0|
+    |i_pack_fu_48              |    10|   0|    10|          0|
+    |trunc_ln53_reg_184        |     9|   0|     9|          0|
+    +--------------------------+------+----+------+-----------+
+    |Total                     |  4119|   0|  4119|          0|
+    +--------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------+-----+------+------------+-------------------------------------------------------------------------+--------------+
+|        RTL Ports        | Dir | Bits |  Protocol  |                              Source Object                              |    C Type    |
++-------------------------+-----+------+------------+-------------------------------------------------------------------------+--------------+
+|ap_clk                   |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|ap_rst                   |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|ap_start                 |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|ap_done                  |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|ap_idle                  |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|ap_ready                 |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed,config12>_Pipeline_DataPack|  return value|
+|in2_buf2_dout            |   in|     8|     ap_fifo|                                                                 in2_buf2|       pointer|
+|in2_buf2_num_data_valid  |   in|     8|     ap_fifo|                                                                 in2_buf2|       pointer|
+|in2_buf2_fifo_cap        |   in|     8|     ap_fifo|                                                                 in2_buf2|       pointer|
+|in2_buf2_empty_n         |   in|     1|     ap_fifo|                                                                 in2_buf2|       pointer|
+|in2_buf2_read            |  out|     1|     ap_fifo|                                                                 in2_buf2|       pointer|
+|data_in_V_02             |   in|  4096|     ap_none|                                                             data_in_V_02|        scalar|
+|data_in_V_out            |  out|  4096|      ap_vld|                                                            data_in_V_out|       pointer|
+|data_in_V_out_ap_vld     |  out|     1|      ap_vld|                                                            data_in_V_out|       pointer|
++-------------------------+-----+------+------------+-------------------------------------------------------------------------+--------------+
+

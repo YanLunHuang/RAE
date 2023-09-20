@@ -1,0 +1,211 @@
+
+
+================================================================
+== Vitis HLS Report for 'gru_stack_single_ap_fixed_ap_fixed_ap_fixed_8_1_5_3_0_config12_s'
+================================================================
+* Date:           Tue Sep 19 13:55:26 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        alveo_hls4ml
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.882 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+-----------+----------+-----------+---------+-----------+---------+
+    |   Latency (cycles)  |  Latency (absolute)  |       Interval      | Pipeline|
+    |   min   |    max    |    min   |    max    |   min   |    max    |   Type  |
+    +---------+-----------+----------+-----------+---------+-----------+---------+
+    |  1761934|  117252460|  7.048 ms|  0.469 sec|  1761934|  117252460|       no|
+    +---------+-----------+----------+-----------+---------+-----------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+---------+-----------+----------+-------+---------+---------+
+        |                                                                                            |                                                                                 |  Latency (cycles) |  Latency (absolute)  |     Interval    | Pipeline|
+        |                                          Instance                                          |                                      Module                                     |   min   |   max   |    min    |    max   |  min  |   max   |   Type  |
+        +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+---------+-----------+----------+-------+---------+---------+
+        |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_32_1_fu_76     |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_32_1    |      514|      514|   2.056 us|  2.056 us|    514|      514|       no|
+        |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack_fu_84            |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack           |      514|      514|   2.056 us|  2.056 us|    514|      514|       no|
+        |grp_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_fu_92                       |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s                      |    23095|  1605157|  92.380 us|  6.421 ms|  23095|  1605157|       no|
+        |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_ResPack_sequences_fu_112  |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_ResPack_sequences  |      514|      514|   2.056 us|  2.056 us|    514|      514|       no|
+        +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+---------+-----------+----------+-------+---------+---------+
+
+        * Loop: 
+        +-------------------+---------+-----------+-----------------+-----------+-----------+------+----------+
+        |                   |   Latency (cycles)  |    Iteration    |  Initiation Interval  | Trip |          |
+        |     Loop Name     |   min   |    max    |     Latency     |  achieved |   target  | Count| Pipelined|
+        +-------------------+---------+-----------+-----------------+-----------+-----------+------+----------+
+        |- DataPropagation  |  1761417|  117251943|  24129 ~ 1606191|          -|          -|    73|        no|
+        +-------------------+---------+-----------+-----------------+-----------+-----------+------+----------+
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        0|       26|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |       24|     1|    81445|   204866|    0|
+|Memory               |        1|     -|        0|        0|    0|
+|Multiplexer          |        -|     -|        -|      176|    -|
+|Register             |        -|     -|     4118|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |       25|     1|    85563|   205068|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        1|    ~0|        9|       47|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |       ~0|    ~0|        3|       15|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+----+-------+--------+-----+
+    |                                          Instance                                          |                                      Module                                     | BRAM_18K| DSP|   FF  |   LUT  | URAM|
+    +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+----+-------+--------+-----+
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack_fu_84            |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack           |        0|   0|   4132|   16711|    0|
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_ResPack_sequences_fu_112  |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_ResPack_sequences  |        0|   0|     13|      77|    0|
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_32_1_fu_76     |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_32_1    |        0|   0|     23|      77|    0|
+    |grp_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_fu_92                       |gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s                      |       24|   1|  77277|  188001|    0|
+    +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+----+-------+--------+-----+
+    |Total                                                                                       |                                                                                 |       24|   1|  81445|  204866|    0|
+    +--------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------+---------+----+-------+--------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    +----------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |     Memory     |                                      Module                                      | BRAM_18K| FF| LUT| URAM| Words| Bits| Banks| W*Bits*Banks|
+    +----------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |h_newstate_V_U  |gru_stack_single_ap_fixed_ap_fixed_ap_fixed_8_1_5_3_0_config12_s_h_newstate_Vchv  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    +----------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+    |Total           |                                                                                  |        1|  0|   0|    0|   512|    8|     1|         4096|
+    +----------------+----------------------------------------------------------------------------------+---------+---+----+-----+------+-----+------+-------------+
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +---------------------+----------+----+---+----+------------+------------+
+    |    Variable Name    | Operation| DSP| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |i_in_2_fu_133_p2     |         +|   0|  0|  14|           7|           1|
+    |icmp_ln47_fu_127_p2  |      icmp|   0|  0|  10|           7|           7|
+    |ap_block_state1      |        or|   0|  0|   2|           1|           1|
+    +---------------------+----------+----+---+----+------------+------------+
+    |Total                |          |   0|  0|  26|          15|           9|
+    +---------------------+----------+----+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------------------+----+-----------+-----+-----------+
+    |          Name         | LUT| Input Size| Bits| Total Bits|
+    +-----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm              |  54|         10|    1|         10|
+    |ap_done                |   9|          2|    1|          2|
+    |h_newstate_V_address0  |  20|          4|    9|         36|
+    |h_newstate_V_ce0       |  20|          4|    1|          4|
+    |h_newstate_V_d0        |  14|          3|    8|         24|
+    |h_newstate_V_we0       |  14|          3|    1|          3|
+    |i_in_fu_60             |   9|          2|    7|         14|
+    |in2_buf2_read          |   9|          2|    1|          2|
+    |layer11_out9_read      |   9|          2|    1|          2|
+    |layer12_out10_write    |   9|          2|    1|          2|
+    |real_start             |   9|          2|    1|          2|
+    +-----------------------+----+-----------+-----+-----------+
+    |Total                  | 176|         36|   32|        101|
+    +-----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------------------------------------------------------------------+------+----+------+-----------+
+    |                                                   Name                                                  |  FF  | LUT| Bits | Const Bits|
+    +---------------------------------------------------------------------------------------------------------+------+----+------+-----------+
+    |ap_CS_fsm                                                                                                |     9|   0|     9|          0|
+    |ap_done_reg                                                                                              |     1|   0|     1|          0|
+    |data_in_V_02_fu_64                                                                                       |  4096|   0|  4096|          0|
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_DataPack_fu_84_ap_start_reg            |     1|   0|     1|          0|
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_ResPack_sequences_fu_112_ap_start_reg  |     1|   0|     1|          0|
+    |grp_gru_stack_single_ap_fixed_ap_fixed_ap_fixed_config12_Pipeline_VITIS_LOOP_32_1_fu_76_ap_start_reg     |     1|   0|     1|          0|
+    |grp_gru_static_ap_fixed_8_1_5_3_0_ap_fixed_8_1_5_3_0_config12_s_fu_92_ap_start_reg                       |     1|   0|     1|          0|
+    |i_in_fu_60                                                                                               |     7|   0|     7|          0|
+    |start_once_reg                                                                                           |     1|   0|     1|          0|
+    +---------------------------------------------------------------------------------------------------------+------+----+------+-----------+
+    |Total                                                                                                    |  4118|   0|  4118|          0|
+    +---------------------------------------------------------------------------------------------------------+------+----+------+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++------------------------------+-----+------+------------+------------------------------------------------------------------+--------------+
+|           RTL Ports          | Dir | Bits |  Protocol  |                           Source Object                          |    C Type    |
++------------------------------+-----+------+------------+------------------------------------------------------------------+--------------+
+|ap_clk                        |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_rst                        |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_start                      |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|start_full_n                  |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_done                       |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_continue                   |   in|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_idle                       |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|ap_ready                      |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|start_out                     |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|start_write                   |  out|     1|  ap_ctrl_hs|  gru_stack_single<ap_fixed,ap_fixed,ap_fixed<8,1,5,3,0>,config12>|  return value|
+|in2_buf2_dout                 |   in|     8|     ap_fifo|                                                          in2_buf2|       pointer|
+|in2_buf2_num_data_valid       |   in|     8|     ap_fifo|                                                          in2_buf2|       pointer|
+|in2_buf2_fifo_cap             |   in|     8|     ap_fifo|                                                          in2_buf2|       pointer|
+|in2_buf2_empty_n              |   in|     1|     ap_fifo|                                                          in2_buf2|       pointer|
+|in2_buf2_read                 |  out|     1|     ap_fifo|                                                          in2_buf2|       pointer|
+|layer11_out9_dout             |   in|     8|     ap_fifo|                                                      layer11_out9|       pointer|
+|layer11_out9_num_data_valid   |   in|     2|     ap_fifo|                                                      layer11_out9|       pointer|
+|layer11_out9_fifo_cap         |   in|     2|     ap_fifo|                                                      layer11_out9|       pointer|
+|layer11_out9_empty_n          |   in|     1|     ap_fifo|                                                      layer11_out9|       pointer|
+|layer11_out9_read             |  out|     1|     ap_fifo|                                                      layer11_out9|       pointer|
+|layer12_out10_din             |  out|     8|     ap_fifo|                                                     layer12_out10|       pointer|
+|layer12_out10_num_data_valid  |   in|     8|     ap_fifo|                                                     layer12_out10|       pointer|
+|layer12_out10_fifo_cap        |   in|     8|     ap_fifo|                                                     layer12_out10|       pointer|
+|layer12_out10_full_n          |   in|     1|     ap_fifo|                                                     layer12_out10|       pointer|
+|layer12_out10_write           |  out|     1|     ap_fifo|                                                     layer12_out10|       pointer|
+|w12_v3_address0               |  out|     9|   ap_memory|                                                            w12_v3|         array|
+|w12_v3_ce0                    |  out|     1|   ap_memory|                                                            w12_v3|         array|
+|w12_v3_q0                     |   in|  4096|   ap_memory|                                                            w12_v3|         array|
+|w12_v2_address0               |  out|     9|   ap_memory|                                                            w12_v2|         array|
+|w12_v2_ce0                    |  out|     1|   ap_memory|                                                            w12_v2|         array|
+|w12_v2_q0                     |   in|  4096|   ap_memory|                                                            w12_v2|         array|
+|w12_v1_address0               |  out|     9|   ap_memory|                                                            w12_v1|         array|
+|w12_v1_ce0                    |  out|     1|   ap_memory|                                                            w12_v1|         array|
+|w12_v1_q0                     |   in|  4096|   ap_memory|                                                            w12_v1|         array|
+|wr12_v3_address0              |  out|     9|   ap_memory|                                                           wr12_v3|         array|
+|wr12_v3_ce0                   |  out|     1|   ap_memory|                                                           wr12_v3|         array|
+|wr12_v3_q0                    |   in|  4096|   ap_memory|                                                           wr12_v3|         array|
+|wr12_v2_address0              |  out|     9|   ap_memory|                                                           wr12_v2|         array|
+|wr12_v2_ce0                   |  out|     1|   ap_memory|                                                           wr12_v2|         array|
+|wr12_v2_q0                    |   in|  4096|   ap_memory|                                                           wr12_v2|         array|
+|wr12_v1_address0              |  out|     9|   ap_memory|                                                           wr12_v1|         array|
+|wr12_v1_ce0                   |  out|     1|   ap_memory|                                                           wr12_v1|         array|
+|wr12_v1_q0                    |   in|  4096|   ap_memory|                                                           wr12_v1|         array|
++------------------------------+-----+------+------------+------------------------------------------------------------------+--------------+
+

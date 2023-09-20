@@ -1,0 +1,198 @@
+
+
+================================================================
+== Vitis HLS Report for 'fillWeights_ap_fixed_8_1_5_3_0_262144u_s'
+================================================================
+* Date:           Tue Sep 19 13:57:33 2023
+
+* Version:        2022.2 (Build 3670227 on Oct 13 2022)
+* Project:        alveo_hls4ml
+* Solution:       solution (Vitis Kernel Flow Target)
+* Product family: virtexuplus
+* Target device:  xcu55c-fsvh2892-2L-e
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing: 
+    * Summary: 
+    +--------+---------+----------+------------+
+    |  Clock |  Target | Estimated| Uncertainty|
+    +--------+---------+----------+------------+
+    |ap_clk  |  4.00 ns|  2.920 ns|     1.08 ns|
+    +--------+---------+----------+------------+
+
++ Latency: 
+    * Summary: 
+    +---------+---------+----------+----------+--------+--------+---------+
+    |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+    |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+    +---------+---------+----------+----------+--------+--------+---------+
+    |   262218|   262218|  1.049 ms|  1.049 ms|  262218|  262218|       no|
+    +---------+---------+----------+----------+--------+--------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |                                                                           |                                                                 |  Latency (cycles) |  Latency (absolute) |     Interval    | Pipeline|
+        |                                  Instance                                 |                              Module                             |   min   |   max   |    min   |    max   |   min  |   max  |   Type  |
+        +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+        |grp_fillWeights_ap_fixed_8_1_5_3_0_262144u_Pipeline_VITIS_LOOP_42_1_fu_61  |fillWeights_ap_fixed_8_1_5_3_0_262144u_Pipeline_VITIS_LOOP_42_1  |   262147|   262147|  1.049 ms|  1.049 ms|  262147|  262147|       no|
+        +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+---------+----------+----------+--------+--------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++---------------------+---------+------+---------+---------+-----+
+|         Name        | BRAM_18K|  DSP |    FF   |   LUT   | URAM|
++---------------------+---------+------+---------+---------+-----+
+|DSP                  |        -|     -|        -|        -|    -|
+|Expression           |        -|     -|        -|        -|    -|
+|FIFO                 |        -|     -|        -|        -|    -|
+|Instance             |        -|     -|     1080|     4477|    -|
+|Memory               |        -|     -|        -|        -|    -|
+|Multiplexer          |        -|     -|        -|      472|    -|
+|Register             |        -|     -|      131|        -|    -|
++---------------------+---------+------+---------+---------+-----+
+|Total                |        0|     0|     1211|     4949|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available SLR        |     1344|  3008|   869120|   434560|  320|
++---------------------+---------+------+---------+---------+-----+
+|Utilization SLR (%)  |        0|     0|       ~0|        1|    0|
++---------------------+---------+------+---------+---------+-----+
+|Available            |     4032|  9024|  2607360|  1303680|  960|
++---------------------+---------+------+---------+---------+-----+
+|Utilization (%)      |        0|     0|       ~0|       ~0|    0|
++---------------------+---------+------+---------+---------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+------+------+-----+
+    |                                  Instance                                 |                              Module                             | BRAM_18K| DSP|  FF  |  LUT | URAM|
+    +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+------+------+-----+
+    |grp_fillWeights_ap_fixed_8_1_5_3_0_262144u_Pipeline_VITIS_LOOP_42_1_fu_61  |fillWeights_ap_fixed_8_1_5_3_0_262144u_Pipeline_VITIS_LOOP_42_1  |        0|   0|  1080|  4477|    0|
+    +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+------+------+-----+
+    |Total                                                                      |                                                                 |        0|   0|  1080|  4477|    0|
+    +---------------------------------------------------------------------------+-----------------------------------------------------------------+---------+----+------+------+-----+
+
+    * DSP: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------------+-----+-----------+-----+-----------+
+    |         Name         | LUT | Input Size| Bits| Total Bits|
+    +----------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm             |  331|         73|    1|         73|
+    |gmem8_blk_n_AR        |    9|          2|    1|          2|
+    |m_axi_gmem8_ARADDR    |   14|          3|   64|        192|
+    |m_axi_gmem8_ARBURST   |    9|          2|    2|          4|
+    |m_axi_gmem8_ARCACHE   |    9|          2|    4|          8|
+    |m_axi_gmem8_ARID      |    9|          2|    1|          2|
+    |m_axi_gmem8_ARLEN     |   14|          3|   32|         96|
+    |m_axi_gmem8_ARLOCK    |    9|          2|    2|          4|
+    |m_axi_gmem8_ARPROT    |    9|          2|    3|          6|
+    |m_axi_gmem8_ARQOS     |    9|          2|    4|          8|
+    |m_axi_gmem8_ARREGION  |    9|          2|    4|          8|
+    |m_axi_gmem8_ARSIZE    |    9|          2|    3|          6|
+    |m_axi_gmem8_ARUSER    |    9|          2|    1|          2|
+    |m_axi_gmem8_ARVALID   |   14|          3|    1|          3|
+    |m_axi_gmem8_RREADY    |    9|          2|    1|          2|
+    +----------------------+-----+-----------+-----+-----------+
+    |Total                 |  472|        104|  124|        416|
+    +----------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |                                          Name                                          | FF | LUT| Bits| Const Bits|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                                                               |  72|   0|   72|          0|
+    |grp_fillWeights_ap_fixed_8_1_5_3_0_262144u_Pipeline_VITIS_LOOP_42_1_fu_61_ap_start_reg  |   1|   0|    1|          0|
+    |trunc_ln_reg_91                                                                         |  58|   0|   58|          0|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+    |Total                                                                                   | 131|   0|  131|          0|
+    +----------------------------------------------------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++----------------------+-----+------+------------+-----------------------------------------------+--------------+
+|       RTL Ports      | Dir | Bits |  Protocol  |                 Source Object                 |    C Type    |
++----------------------+-----+------+------------+-----------------------------------------------+--------------+
+|ap_clk                |   in|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|ap_rst                |   in|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|ap_start              |   in|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|ap_done               |  out|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|ap_idle               |  out|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|ap_ready              |  out|     1|  ap_ctrl_hs|  fillWeights<ap_fixed<8, 1, 5, 3, 0>, 262144u>|  return value|
+|m_axi_gmem8_AWVALID   |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWREADY   |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWADDR    |  out|    64|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWID      |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWLEN     |  out|    32|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWSIZE    |  out|     3|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWBURST   |  out|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWLOCK    |  out|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWCACHE   |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWPROT    |  out|     3|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWQOS     |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWREGION  |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_AWUSER    |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WVALID    |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WREADY    |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WDATA     |  out|   512|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WSTRB     |  out|    64|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WLAST     |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WID       |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_WUSER     |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARVALID   |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARREADY   |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARADDR    |  out|    64|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARID      |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARLEN     |  out|    32|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARSIZE    |  out|     3|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARBURST   |  out|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARLOCK    |  out|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARCACHE   |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARPROT    |  out|     3|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARQOS     |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARREGION  |  out|     4|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_ARUSER    |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RVALID    |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RREADY    |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RDATA     |   in|   512|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RLAST     |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RID       |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RFIFONUM  |   in|     9|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RUSER     |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_RRESP     |   in|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_BVALID    |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_BREADY    |  out|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_BRESP     |   in|     2|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_BID       |   in|     1|       m_axi|                                          gmem8|       pointer|
+|m_axi_gmem8_BUSER     |   in|     1|       m_axi|                                          gmem8|       pointer|
+|iWeightsIn            |   in|    64|     ap_none|                                     iWeightsIn|        scalar|
+|weights_address0      |  out|     9|   ap_memory|                                        weights|         array|
+|weights_ce0           |  out|     1|   ap_memory|                                        weights|         array|
+|weights_we0           |  out|   512|   ap_memory|                                        weights|         array|
+|weights_d0            |  out|  4096|   ap_memory|                                        weights|         array|
++----------------------+-----+------+------------+-----------------------------------------------+--------------+
+
